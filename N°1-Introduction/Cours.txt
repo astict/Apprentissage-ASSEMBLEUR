@@ -1,0 +1,98 @@
+ /--------------------------------------------------------------------------------/
+/------------------------------- INTRODUCTION -----------------------------------/
+
+
+| Qu’est-ce que le langage d’assembleur ? |
+
+Le langage d’assembleur (ou langage d’assemblage) est un langage de programmation très bas niveau, encore plus proche de la machine que des langages comme C ou C++.
+Il s’agit d’une représentation lisible par l’humain du langage machine, lequel est constitué uniquement 
+de suites de bits (0 et 1), parfois représentées en hexadécimal.
+
+Programmer directement en binaire étant extrêmement fastidieux, le langage d’assembleur permet d’utiliser des mnémoniques (instructions textuelles) correspondant directement aux instructions machine du processeur.
+
+/--------------------------------------------------------------------------------------------------------------------------------/
+
+| Un langage dépendant du processeur |
+
+Il n’existe pas un seul langage d’assembleur, mais un langage d’assembleur par architecture :
+
+* x86 / x86-64 (Intel, AMD)
+* ARM
+* MIPS
+* RISC, etc.
+
+Chaque processeur possède un jeu d’instructions spécifique, et le langage d’assembleur est directement lié à ce jeu d’instructions.
+
+--> Un programme assembleur écrit pour une architecture **n’est pas portable** vers une autre.
+
+/--------------------------------------------------------------------------------------------------------------------------------/
+
+| Assembleur, langage d’assembleur et assemblage |
+
+Il est important de bien distinguer les termes :
+
+* Langage d’assembleur : ce que le programmeur écrit.
+* Assembleur : le programme (outil) qui traduit le langage d’assembleur en langage machine.
+* Assemblage : l’action de traduction vers le langage machine.
+* Désassemblage : l’opération inverse, qui consiste à retrouver un code assembleur à partir d’un programme binaire.
+
+/--------------------------------------------------------------------------------------------------------------------------------/
+
+| Position du langage d’assembleur dans la chaîne de compilation |
+
+Dans un langage comme le C ou le C++ :
+
+1. Le code source est compilé en assembleur
+2. L’assembleur est ensuite transformé en code machine
+
+Le langage d’assembleur communique donc directement avec le système, sans intermédiaire de haut niveau, ce qui donne :
+
+* beaucoup de contrôle
+* peu de sécurité
+* un fort risque d’erreurs si le code est incorrect
+
+/--------------------------------------------------------------------------------------------------------------------------------/
+
+| Historique rapide |
+
+* Apparition du langage d’assembleur dans les années 1950
+* Premier programme assembleur notable : IBM 701 (1954)
+* Des outils majeurs comme le compilateur GCC ont été écrits initialement en langage d’assembleur
+
+Le langage d’assembleur est à l’origine de tous les langages modernes.
+
+/--------------------------------------------------------------------------------------------------------------------------------/
+
+| Syntaxes et instructions |
+
+Il existe plusieurs syntaxes selon l’architecture et les conventions :
+
+* Syntaxe Intel
+* Syntaxe AT&T
+
+Le langage repose sur des instructions élémentaires, telles que :
+
+* manipulation de la mémoire
+* calculs arithmétiques
+* comparaisons
+* sauts et appels de fonctions
+
+Aucune fonction “haut niveau” n’existe (comme `printf`) : tout doit être construit instruction par instruction.
+
+/--------------------------------------------------------------------------------------------------------------------------------/
+
+| Avantages et inconvénients |
+
+Inconvénients :
+
+* Code très long et verbeux
+* Peu ou pas de portabilité
+* Débogage difficile
+* Risque élevé d’erreurs
+
+Avantages :
+
+* Contrôle total sur la machine
+* Performances maximales
+* Compréhension profonde du fonctionnement interne des systèmes
+
